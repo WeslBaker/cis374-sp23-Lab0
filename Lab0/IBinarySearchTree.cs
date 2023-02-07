@@ -23,7 +23,10 @@ namespace Lab0
         public BinarySearchTreeNode<T> MinNode(BinarySearchTreeNode<T> node);
         public BinarySearchTreeNode<T> MaxNode(BinarySearchTreeNode<T> node);
 
-        public double? MedianKey { get; }
+		public BinarySearchTreeNode<T> MinNode(BinarySearchTreeNode<T> node);
+        public BinarySearchTreeNode<T> MaxNode(BinarySearchTreeNode<T> node);
+
+        public double MedianKey { get; }
 
 		public BinarySearchTreeNode<T> Next(BinarySearchTreeNode<T> node);
 		public BinarySearchTreeNode<T> Prev(BinarySearchTreeNode<T> node);

@@ -7,6 +7,48 @@ namespace UnitTestProject1
     [TestClass]
     public class AdvancedTests
     {
+
+        [TestMethod]
+        public void MinKey1()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10, 10);
+            tree.Add(5, 5);
+            tree.Add(20, 10);
+            tree.Add(15, 10);
+            tree.Add(25, 10);
+            tree.Add(1, 10);
+            tree.Add(12, 10);
+
+            Assert.AreEqual(1, tree.MinKey);
+        }
+
+        [TestMethod]
+        public void MinKey2()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10, 10);
+            tree.Add(5, 5);
+            tree.Add(20, 10);
+            tree.Add(15, 10);
+            tree.Add(25, 10);
+            tree.Add(12, 10);
+
+            Assert.AreEqual(5, tree.MinKey);
+        }
+
+        [TestMethod]
+        public void MinKey3()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10, 10);
+            tree.Add(20, 10);
+            tree.Add(15, 10);
+            tree.Add(25, 10);
+            tree.Add(12, 10);
+
+            Assert.AreEqual(10, tree.MinKey);
+        }
         [TestMethod]
         public void MedianKey1()
         {
@@ -44,6 +86,31 @@ namespace UnitTestProject1
             tree.Add(1, 3);
             tree.Add(2, 4);
             Assert.AreEqual(1.5, tree.MedianKey);
+        }
+
+        [TestMethod]
+        public void MedianKey5()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(1, 3);
+            tree.Add(2, 3);
+            tree.Add(3, 3);
+            tree.Add(10, 3);
+            tree.Add(30, 3);
+            Assert.AreEqual(3.0, tree.MedianKey);
+        }
+
+        [TestMethod]
+        public void MedianKey6()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10, 3);
+            tree.Add(30, 3);
+            tree.Add(35, 3);
+            tree.Add(1, 3);
+            tree.Add(2, 3);
+            tree.Add(3, 3);
+            Assert.AreEqual(6.5, tree.MedianKey);
         }
 
         [TestMethod]

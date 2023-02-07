@@ -15,13 +15,15 @@ namespace Lab0
 		public int Height { get; }
 
 		// Advanced
-		public int MinKey { get; }
-		public int MaxKey { get; }
+		public int? MinKey { get; }
+		public int? MaxKey { get; }
 
 		public Tuple<int,T> Min {get;}
         public Tuple<int, T> Max { get; }
+        public BinarySearchTreeNode<T> MinNode(BinarySearchTreeNode<T> node);
+        public BinarySearchTreeNode<T> MaxNode(BinarySearchTreeNode<T> node);
 
-		public double MedianKey { get; }
+        public double? MedianKey { get; }
 
 		public BinarySearchTreeNode<T> Next(BinarySearchTreeNode<T> node);
 		public BinarySearchTreeNode<T> Prev(BinarySearchTreeNode<T> node);

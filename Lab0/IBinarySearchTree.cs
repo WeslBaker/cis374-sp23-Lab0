@@ -18,12 +18,7 @@ namespace Lab0
 		public int? MinKey { get; }
 		public int? MaxKey { get; }
 
-		public Tuple<int,T> Min {get;}
-        public Tuple<int, T> Max { get; }
         public BinarySearchTreeNode<T> MinNode(BinarySearchTreeNode<T> node);
-        public BinarySearchTreeNode<T> MaxNode(BinarySearchTreeNode<T> node);
-
-		public BinarySearchTreeNode<T> MinNode(BinarySearchTreeNode<T> node);
         public BinarySearchTreeNode<T> MaxNode(BinarySearchTreeNode<T> node);
 
         public double MedianKey { get; }
